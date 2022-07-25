@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/postnikdaniil/.nvm/versions/node/v14.15.5/bin/node /Users/postnikdaniil/.nvm/versions/node/v14.15.5/bin/yarn add apollo-server-koa
+
+PATH: 
+  /Users/postnikdaniil/.nvm/versions/node/v14.15.5/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/postnikdaniil/Public/work/graphql/node_modules/.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.15.5
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/postnikdaniil/Public/work/graphql/package.json: Unexpected token } in JSON at position 721
+      at JSON.parse (<anonymous>)
+      at /Users/postnikdaniil/.nvm/versions/node/v14.15.5/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/Users/postnikdaniil/.nvm/versions/node/v14.15.5/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/postnikdaniil/.nvm/versions/node/v14.15.5/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "graphql-apollo-koa-typeorm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@types/node": "^18.6.1",
+      "config": "^3.3.7",
+      "dotenv": "^16.0.1",
+      "envalid": "^7.3.1",
+      "graphql": "^16.5.0",
+      "graphql-tools": "^8.3.0",
+      "koa": "^2.13.4",
+      "koa-bodyparser": "^4.3.0",
+      "koa-router": "^12.0.0",
+      "nodemon": "^2.0.19",
+      "pg": "^8.7.3",
+      "reflect-metadata": "^0.1.13",
+      "ts-node": "^10.9.1",
+      "tsconfig-paths": "^4.0.0",
+      "typeorm": "^0.3.7",
+      "typescript": "^4.7.4",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

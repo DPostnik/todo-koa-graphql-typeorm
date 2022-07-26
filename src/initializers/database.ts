@@ -22,8 +22,12 @@ const AppDataSource = new DataSource({
     synchronize: true,
 });
 
-export const databaseInitializer = async () => {
-    return await AppDataSource.initialize().then((connection) => {
+const databaseInitializer = async () => {
+    return await AppDataSource.initialize().then(() => {
         console.log('Database connection established');
     });
 };
+
+const manager = AppDataSource.manager;
+
+export { manager, databaseInitializer };

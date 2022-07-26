@@ -1,32 +1,24 @@
-import {gql} from "apollo-server-koa";
 import {makeExecutableSchema} from "graphql-tools";
+import {Query} from "./types/query";
+import {resolvers} from "./resolvers";
+import {types} from "./types";
+import {Mutation} from "./types/mutation";
 
-const typeDefs = gql`
-    type Card {
-        id: String
-        done: Boolean
-    }
-    
-    type Query {
-        cards: [Card]
+const schemaDefinition = `
+    schema {
+        query: Query
+        mutation: Mutation
     }
 `;
 
-const cards = [
-    {id: '1', done: false},
-    {id: '2', done: true},
-]
+const typeDefs = [
+    schemaDefinition,
+    Query,
+    types,
+    Mutation,
+];
 
-
-const resolvers = {
-    Query: {
-        cards: () => cards,
-    }
-}
-
-const schema = makeExecutableSchema({
+export const schema = makeExecutableSchema({
     typeDefs,
-    resolvers: [resolvers]
-})
-
-export default schema;
+    resolvers
+});

@@ -3,7 +3,7 @@ import { databaseInitializer } from 'initializers/database';
 import * as config from "config";
 const mount = require('koa-mount');
 const { graphqlHTTP } = require('koa-graphql');
-import schema from './graphql/schema';
+import {schema} from './graphql/schema';
 
 const bootstrap = async () => {
     await databaseInitializer();
@@ -19,7 +19,6 @@ const bootstrap = async () => {
             }),
         ),
     );
-    
     const port = config.get<number>('port');
 
     app.listen(port);

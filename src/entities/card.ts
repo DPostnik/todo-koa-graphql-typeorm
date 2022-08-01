@@ -1,40 +1,26 @@
-import {
-    Entity,
-    PrimaryGeneratedColumn,
-    Column,
-    CreateDateColumn,
-    UpdateDateColumn,
-} from 'typeorm';
-
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('cards')
 export class Card {
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
-    @PrimaryGeneratedColumn('uuid')
-    id: string;
+  @CreateDateColumn()
+  created_at: Date;
 
+  @UpdateDateColumn()
+  updated_at: Date;
 
-    @CreateDateColumn()
-    created_at: Date;
+  @Column('text')
+  title: string;
 
+  @Column('text', {
+    nullable: true,
+  })
+  description: string;
 
-    @UpdateDateColumn()
-    updated_at: Date;
-
-
-    @Column('text')
-    title: string;
-
-
-    @Column('text', {
-        nullable: true,
-    })
-    description: string;
-
-
-    @Column('boolean', {
-        default: "false",
-    })
-    done: boolean;
-
+  @Column('boolean', {
+    default: 'false',
+  })
+  done: boolean;
 }

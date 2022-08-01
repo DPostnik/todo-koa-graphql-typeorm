@@ -1,8 +1,8 @@
-import {makeExecutableSchema} from "graphql-tools";
-import {Query} from "./types/query";
-import {resolvers} from "./resolvers";
-import {types} from "./types";
-import {Mutation} from "./types/mutation";
+import { makeExecutableSchema } from 'graphql-tools';
+import { Query } from './types/query';
+import { resolvers } from './resolvers';
+import { types } from './types';
+import { Mutation } from './types/mutation';
 
 const schemaDefinition = `
     schema {
@@ -11,14 +11,9 @@ const schemaDefinition = `
     }
 `;
 
-const typeDefs = [
-    schemaDefinition,
-    Query,
-    types,
-    Mutation,
-];
+const typeDefs = [schemaDefinition, Query, types, Mutation];
 
 export const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers
+  typeDefs,
+  resolvers,
 });

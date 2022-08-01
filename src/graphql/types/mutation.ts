@@ -4,4 +4,4 @@ export const Mutation = `
         updateCard(id: String!, patch: CardPatch!): Card
         deleteCard(id: String!): Boolean
     }
-`
+`;

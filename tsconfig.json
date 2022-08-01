@@ -4,18 +4,11 @@
     "noImplicitAny": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution" : "node",
-    "lib": [
-      "es2017"
-    ],
-    "types": [
-      "node"
-    ],
+    "moduleResolution": "node",
+    "lib": ["es2017"],
+    "types": ["node"],
     "sourceMap": true,
     "baseUrl": "./src"
   },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
